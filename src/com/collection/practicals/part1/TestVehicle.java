@@ -1,7 +1,9 @@
 package com.collection.practicals.part1;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class TestVehicle {
 
@@ -13,5 +15,9 @@ public class TestVehicle {
 		List al = new ArrayList();
 		System.out.println(al.add(v1));
 		System.out.println(al.contains(v1));
+		
+		Set hs1 = new HashSet();
+		System.out.println(hs1.add(v1));
+		System.out.println(hs1.add(v2));
 	}
 }

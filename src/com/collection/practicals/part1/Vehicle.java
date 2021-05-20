@@ -4,7 +4,6 @@ public class Vehicle {
 
 	String name;
 	int engineCapacity;
-
 	public Vehicle(String name, int engineCapacity) {
 		super();
 		this.name = name;
@@ -20,6 +19,11 @@ public class Vehicle {
 				return false;
 		} else
 			throw new IllegalArgumentException("Pass only vehicle");
+	}
+	
+	public int hashCode()
+	{
+		return (this.name.toString()+this.engineCapacity).hashCode();
 	}
 
 }
