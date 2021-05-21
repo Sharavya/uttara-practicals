@@ -1,6 +1,6 @@
 package com.collection.practicals.part1;
 
-public class Vehicle {
+public class Vehicle implements Comparable<Vehicle>{
 
 	String name;
 	int engineCapacity;
@@ -24,6 +24,20 @@ public class Vehicle {
 	public int hashCode()
 	{
 		return (this.name.toString()+this.engineCapacity).hashCode();
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Vehicle [name=" + name + ", engineCapacity=" + engineCapacity + "]";
+	}
+
+	@Override
+	public int compareTo(Vehicle o) {
+		int n = this.name.compareTo(o.name);
+		if(n !=0)
+			return n;
+		return o.engineCapacity-this.engineCapacity;
 	}
 
 }
