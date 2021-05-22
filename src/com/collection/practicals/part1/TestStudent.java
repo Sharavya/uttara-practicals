@@ -12,11 +12,11 @@ public class TestStudent {
 
 	public static void main(String[] args) {
 		Student s1 = new Student("sharavya", 1, 25);
-		Student s2 = new Student("pummy", 1, 25);
-		Student s3 = new Student("chiri", 1, 25);
-		Student s4 = new Student("sahana", 1, 25);
-		Student s5 = new Student("swathi", 1, 25);
-		Student s6 = new Student("sharavya", 1, 25);
+		Student s2 = new Student("pummy", 1, 26);
+		Student s3 = new Student("chiri", 1, 27);
+		Student s4 = new Student("sahana", 1, 28);
+		Student s5 = new Student("swathi", 1, 29);
+		Student s6 = new Student("sharavya", 1, 30);
 		
 		List<Student> al = new ArrayList<Student>();
 		al.add(s1);
@@ -54,17 +54,27 @@ public class TestStudent {
 		{
 			System.out.println("Linked Hashset..."+s);
 		}
-		
-		Set<Student> ts = new TreeSet<Student>();
+		StudentNameComparator scn = new StudentNameComparator();
+		StudentAgeDescending sad = new StudentAgeDescending();
+		/*Set<Student> ts = new TreeSet<Student>();
 		ts.add(s1);
 		ts.add(s2);
 		ts.add(s3);
 		ts.add(s4);
 		ts.add(s5);
 		ts.add(s6);
-		for(Student s:ts)
+		System.out.println(ts);*/
+		/*for(Student s:ts)
 		{
 			System.out.println("tress set..."+s);
-		}
+		}*/
+		Set<Student> ts2 = new TreeSet<Student>(sad);
+		ts2.add(s1);
+		ts2.add(s2);
+		ts2.add(s3);
+		ts2.add(s4);
+		ts2.add(s5);
+		ts2.add(s6);
+		System.out.println(ts2);
 		}
 }

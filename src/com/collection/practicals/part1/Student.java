@@ -1,6 +1,7 @@
 package com.collection.practicals.part1;
 
-public class Student implements Comparable<Student>{
+
+public class Student implements Comparable<Student> {
 
 	String name;
 	int id;
